@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Book {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
@@ -20,10 +20,12 @@ public class Book {
 	private String publisher;
 	private String publicationDate;
 	private String language;
+	private String category;
 	private int numberOfPages;
 	private String format;
 	private int isbn;
 	private double shippingWeight;
+	private double listPrice;
 	private double ourPrice;
 	private boolean active=true;
 	
@@ -82,6 +84,14 @@ public class Book {
 		this.language = language;
 	}
 
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public int getNumberOfPages() {
 		return numberOfPages;
 	}
@@ -112,6 +122,14 @@ public class Book {
 
 	public void setShippingWeight(double shippingWeight) {
 		this.shippingWeight = shippingWeight;
+	}
+
+	public double getListPrice() {
+		return listPrice;
+	}
+
+	public void setListPrice(double listPrice) {
+		this.listPrice = listPrice;
 	}
 
 	public double getOurPrice() {
@@ -153,5 +171,6 @@ public class Book {
 	public void setBookImage(MultipartFile bookImage) {
 		this.bookImage = bookImage;
 	}
+	
 	
 }
