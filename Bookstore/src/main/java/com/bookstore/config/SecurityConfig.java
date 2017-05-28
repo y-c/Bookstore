@@ -37,7 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		"/forgetPassword", 
 		"/login",
 		"/fonts/**", //added in Lecture 23 to solve bug in login
-		"/bookshelf"
+		"/bookshelf",
+		"/bookDetail"
 	};
 
 	@Override
